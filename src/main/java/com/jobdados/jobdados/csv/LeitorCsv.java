@@ -17,7 +17,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LeitorCsv {
-
     public static void main(String[] args)  {
 
         String nome = "";
