@@ -10,7 +10,7 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public Pessoa(String nome, Double idade) {
+    public Pessoa(String nome, double idade) {
         this.nome = nome;
         this.idade = idade;
     }

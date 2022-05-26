@@ -17,6 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LeitorCsv {
+
     public static void main(String[] args)  {
 
         String nome = "";
@@ -42,20 +43,17 @@ public class LeitorCsv {
                     Cell cell = cellIterator.next();
 
                     switch (cell.getCellType()) {
-
                         case STRING:
                             nome = cell.getStringCellValue();
-                            System.out.println("nome" + cell.getStringCellValue());
                             break;
 
                         case NUMERIC:
                             idade = cell.getNumericCellValue();
-                            System.out.println("idade" + cell.getNumericCellValue());
                             break;
                     }
-                    Pessoa p = new Pessoa(nome, idade);
-                    pessoas.add(p);
                 }
+                Pessoa p = new Pessoa(nome, idade);
+                pessoas.add(p);
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(LeitorCsv.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
